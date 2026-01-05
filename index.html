@@ -7,33 +7,41 @@
 
 <style>
   @font-face {
-    font-family: 'SpaceGrotesk';
+    font-family: 'CaskaydiaCove';
     font-style: normal;
     font-weight: normal;
-    src: url('./fonts/SpaceGrotesk-Regular.woff2') format('woff2');
+    src: url('./fonts/CaskaydiaCoveNerdFont-Regular.ttf') format('truetype');
   }
 
   @font-face {
-    font-family: 'SpaceGrotesk';
+    font-family: 'CaskaydiaCove';
     font-style: normal;
     font-weight: bold;
-    src: url('./fonts/SpaceGrotesk-Bold.woff2') format('woff2');
+    src: url('./fonts/CaskaydiaCoveNerdFont-Bold.ttf') format('truetype');
   }
 
   :root {
     --color-background: #111;
     --color-text-subtle: #888;
     --color-text: #eee;
-    --font-family: SpaceGrotesk, -apple-system, Helvetica, sans-serif;
+    --font-family: CaskaydiaCove, -apple-system, Helvetica, sans-serif;
     --font-size: clamp(16px, 1.5vw, 18px);
     --transition-speed: 200ms;
   }
 
   @media (prefers-color-scheme: light) {
     :root {
-      --color-background: #e8e8e8;
-      --color-text-subtle: #606060;
-      --color-text: #111;
+      --color-background: #DCE0E8;
+      --color-text-subtle: #4C4F69;
+      --color-text: #4C4F69;
+    }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+        --color-background: #1E1E2E;
+        --color-text-subtle: #CDD6F4;
+        --color-text: #CDD6F4;
     }
   }
 </style>
@@ -42,7 +50,7 @@
   const CONFIG = {
     commandPathDelimiter: '/',
     commandSearchDelimiter: ' ',
-    defaultSearchTemplate: 'https://duckduckgo.com/?q={}',
+    defaultSearchTemplate: 'https://google.com/?q={}',
     openLinksInNewTab: true,
     suggestionLimit: 4,
   };
@@ -57,28 +65,22 @@
     ['c', { name: 'Cloudflare', url: 'https://dash.cloudflare.com' }],
     ['d', { name: 'Discord', url: 'https://discord.com/channels/@me' }],
     ['e', { name: 'PostHog', url: 'https://us.posthog.com' }],
-    ['f', { name: 'Figma', url: 'https://www.figma.com' }],
+    ['f', { name: 'Facebook', url: 'https://adsmanager.facebook.com/adsmanager' }],
     ['g', { name: 'GitHub', searchTemplate: '/search?q={}', suggestions: ['g/copilot', 'g/trending'], url: 'https://github.com' }],
-    ['h', { name: 'Hetzner', url: 'https://console.hetzner.cloud/projects' }],
-    ['i', { name: 'InstantDB', url: 'https://instantdb.com/dash' }],
     ['l', { name: 'LinkedIn', url: 'https://www.linkedin.com/feed/' }],
-    ['m', { name: 'Modal', url: 'https://modal.com/apps' }],
-    ['n', { name: 'Pinecone', url: 'https://app.pinecone.io' }],
     ['o', { name: 'OpenRouter', url: 'https://openrouter.ai/models' }],
-    ['p', { name: 'Proton', suggestions: ['p/drive', 'p/pass'], url: 'https://mail.proton.me/u/0/inbox' }],
-    ['p/drive', { url: 'https://drive.proton.me/u/0' }],
-    ['p/pass', { url: 'https://pass.proton.me/u/0' }],
-    ['q', { name: 'QBO', url: 'https://qbo.intuit.com' }],
     ['r', { name: 'Reddit', url: 'https://www.reddit.com' }],
-    ['s', { name: 'Supabase', url: 'https://supabase.com/dashboard/organizations' }],
+    ['s', { name: 'Shopify', suggestions : ['s/stripe', 's/myplushy'], url: 'https://admin.shopify.com/' }],
+    ['s/stripe',  { url: 'https://stripe.com/dashboard'}],
+    ['s/myplushy', { url: 'https://myplushy-3147.myshopify.com'}],
     ['t', { name: 'TickTick', url: 'https://ticktick.com/webapp/#q/today/tasks' }],
-    ['u', { name: 'Duolingo', url: 'https://www.duolingo.com/learn' }],
     ['v', { name: 'Vercel', url: 'https://vercel.com/dashboard' }],
     ['x', { name: '𝕏', suggestions: ['x/jellyseerr', 'x/n8n'], url: 'https://x.com/home' }],
     ['x/jellyseerr', { url: 'https://jellyseerr.xvyz.co' }],
     ['x/n8n', { url: 'https://n8n.xvyz.co/home/workflows' }],
     ['y', { name: 'YouTube', searchTemplate: '/results?search_query={}', url: 'https://www.youtube.com/feed/subscriptions' }],
     ['0', { name: 'localhost', url: 'http://localhost:3000' }],
+    ['0/supabase', { url :'http://127.0.0.1:54323/project/default/'}]
   ]);
 </script>
 
